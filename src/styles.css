@@ -1,0 +1,73 @@
+/* Le pongo html a todos sus hijos */
+html * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    /* parapoder mandar el footer abajo hago el display */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+
+}
+
+header {
+    background-color: brown;
+    color: blanchedalmond;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding-left: 5vw;
+    
+}
+
+footer {
+    background-color: black;
+    color: blanchedalmond;
+    padding: 1vh 5vw;
+}
+
+#mainContainer {
+    background-color: rgba(50, 23, 53, 0.809);
+    /* Este es hijo del padre flexible */
+    flex: 1;
+    width: 95%;
+    margin: 2vh auto;
+    color: azure;
+    /* para que quede un componente de cada lado lo hago flex */
+    display: flex;
+    justify-content: space-between;
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Todos los hijos del div con id formulario */
+div#formulario *{
+    margin-bottom: 1vh;
+    margin-right: 2vh;
+    
+}
+
+div.invitado {
+    display: flex;
+    align-items: center;
+}
+/* aclaro el elemento por si repito el nombre de la clase */
+div.invitado div.fotoInvitado {
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-size: cover;
+}
+
+h4.presente {
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, 0.529);
+    align-items: center;
+}
