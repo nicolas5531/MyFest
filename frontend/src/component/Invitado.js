@@ -33,7 +33,5 @@ export const Invitado = ({invitado, borrarInvitado, asistioInvitado}) => {
                 >No asistió</button>
             </>)}
         </>    
-        
     )
-    
 }

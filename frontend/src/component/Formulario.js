@@ -17,11 +17,17 @@ export const Formulario = ({agregarInvitado, leerInput, nuevoUsuario}) => {
              onChange={leerInput}
              value={nuevoUsuario.apellido}/>
              
+             <select name='sexo' id='sexo' onChange={leerInput}>
+                 {/* tiene que tener una option por defecto para q funcione. hay que dejarla por defecto(selected) y no seleccionable  */}
+                    <option value='' disabled='true' selected> </option>
+                    <option value='H'>Hombre</option>
+                    <option value='M'>Mujer</option>
+             </select>
             {/* porq al ponerle foto al name no puedo ver lo q escribo en el input */}
-            <input type="text" name="url"
+            {/* <input type="text" name="url"
              autoComplete="off" placeholder="Ingresa link o url de la foto" 
              onChange={leerInput}
-             value={nuevoUsuario.url}/>
+             value={nuevoUsuario.url}/> */}
 {/* el boton recibe la funcion q no lleva this pq es un componente funcional */}
             <button onClick={agregarInvitado}>Enviar</button> 
         </div>

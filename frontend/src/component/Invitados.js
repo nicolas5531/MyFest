@@ -5,6 +5,7 @@ import React from 'react'
 import { Invitado } from './Invitado'
 
 export const Invitados = ({invitados, borrarInvitado, asistioInvitado}) => {
+    console.log(invitados)
     return (
         <div>
             <h1>Invitados</h1>
